@@ -1,0 +1,10 @@
+[
+  { "plate": "UP16AT1021", "type": "mini_truck", "capacityKg": 750, "covered": false, "refrigerated": false, "hasLoader": false },
+  { "plate": "UP14BT2245", "type": "pickup", "capacityKg": 1500, "covered": true, "refrigerated": false, "hasLoader": false },
+  { "plate": "DL01CX7788", "type": "open_truck", "capacityKg": 5000, "covered": false, "refrigerated": false, "hasLoader": false },
+  { "plate": "HR26DK3321", "type": "covered_truck", "capacityKg": 4000, "covered": true, "refrigerated": false, "hasLoader": false },
+  { "plate": "UP16FR9012", "type": "refrigerated", "capacityKg": 2000, "covered": true, "refrigerated": true, "hasLoader": false },
+  { "plate": "DL01LA5566", "type": "flatbed", "capacityKg": 9000, "covered": false, "refrigerated": false, "hasLoader": true },
+  { "plate": "UP14CG4410", "type": "covered_truck", "capacityKg": 6000, "covered": true, "refrigerated": false, "hasLoader": true },
+  { "plate": "HR55AB1209", "type": "mini_truck", "capacityKg": 800, "covered": true, "refrigerated": false, "hasLoader": false }
+]

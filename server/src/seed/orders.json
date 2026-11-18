@@ -1,0 +1,5 @@
+[
+  { "customerName": "Sharma Traders", "rawText": "kal subah 2 ton cement Noida se Gurgaon bhejna hai", "priority": "normal" },
+  { "customerName": "Fresh Basket", "rawText": "Urgent: 500 kg vegetables Faridabad to Delhi Azadpur mandi by 6am", "priority": "urgent" },
+  { "customerName": "Home Decor Co", "rawText": "Need to move 3 sofas and a glass table from Ghaziabad to Connaught Place today", "priority": "normal" }
+]

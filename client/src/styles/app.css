@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Palette taken from Indian highways: signage green, kilometre-stone marigold,
+   tail-light red, and the concrete they are poured from. */
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #14201c;
+  --color-road: #0f5b46;
+  --color-road-dark: #0a3f31;
+  --color-marigold: #f2b227;
+  --color-concrete: #e8ecef;
+  --color-brake: #d43d2f;
+  --color-paper: #fbfaf6;
+}
+
+html,
+body {
+  background: var(--color-concrete);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-road);
+  outline-offset: 2px;
+}
+
+/* Road centreline under the header */
+.centreline {
+  height: 6px;
+  background-color: var(--color-road-dark);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-marigold) 0 22px,
+    transparent 22px 40px
+  );
+  background-size: 100% 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Consignment slip: the one 3D moment ---------- */
+.slip {
+  position: relative;
+  background: var(--color-paper);
+  border-top: 6px solid var(--color-marigold);
+  border-radius: 3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(20, 32, 28, 0.1),
+    0 14px 24px -10px rgba(20, 32, 28, 0.3),
+    0 36px 56px -28px rgba(15, 91, 70, 0.45);
+  transform-origin: 50% 0;
+  animation: slip-in 0.8s cubic-bezier(0.2, 0.8, 0.25, 1) backwards;
+}
+
+@keyframes slip-in {
+  from {
+    opacity: 0;
+    transform: perspective(1400px) rotateX(-80deg) translateY(-12px);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1400px) rotateX(0deg) translateY(0);
+  }
+}
+
+/* Perforated tear line with notches cut from the paper */
+.perf {
+  position: relative;
+  height: 0;
+  margin: 18px -20px;
+  border-top: 2px dashed rgba(20, 32, 28, 0.16);
+}
+.perf::before,
+.perf::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-concrete);
+  box-shadow: inset 0 1px 3px rgba(20, 32, 28, 0.2);
+}
+.perf::before {
+  left: -10px;
+}
+.perf::after {
+  right: -10px;
+}
+
+.stamp {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 3px double currentColor;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: rotate(-9deg);
+  opacity: 0.92;
+  mix-blend-mode: multiply;
+  user-select: none;
+  animation: stamp-in 0.45s cubic-bezier(0.2, 0.9, 0.3, 1) 0.55s backwards;
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-9deg) scale(1.9);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(-9deg) scale(0.96);
+  }
+  100% {
+    opacity: 0.92;
+    transform: rotate(-9deg) scale(1);
+  }
+}
+
+/* ---------- Waiting state: a truck on a dashed road ---------- */
+.road-strip {
+  position: relative;
+  height: 32px;
+  border-bottom: 2px dashed rgba(20, 32, 28, 0.25);
+}
+.road-strip > .rig {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  color: var(--color-road);
+  animation: drive 2.4s ease-in-out infinite alternate;
+}
+@keyframes drive {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 32px);
+  }
+}
+
+/* ---------- Map ---------- */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #dfe5e8;
+}
+/* Tailwind's reset would otherwise squash map tiles */
+.leaflet-container img,
+.leaflet-container .leaflet-tile {
+  max-width: none !important;
+  max-height: none !important;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(20, 32, 28, 0.25);
+}
+.leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.drv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(20, 32, 28, 0.4);
+}
+.drv-assigned {
+  position: relative;
+  background: var(--color-ink);
+  color: var(--color-marigold);
+  box-shadow: 0 3px 8px rgba(20, 32, 28, 0.5);
+}
+.drv-assigned::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 3px solid var(--color-marigold);
+  animation: ring 1.8s ease-out infinite;
+}
+@keyframes ring {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 6px rgba(20, 32, 28, 0.45);
+}
+.pin > span {
+  transform: rotate(45deg);
+  color: #fff;
+  font: 700 14px var(--font-display);
+}
+.pin-pickup {
+  background: var(--color-road);
+}
+.pin-drop {
+  background: var(--color-ink);
+}
+
+/* The one active route marches toward the pickup */
+.route-march {
+  animation: march 1.1s linear infinite;
+}
+@keyframes march {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

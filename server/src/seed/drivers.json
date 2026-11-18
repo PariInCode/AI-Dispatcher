@@ -1,0 +1,10 @@
+[
+  { "name": "Ramesh Kumar", "phone": "9000000001", "label": "Noida Sector 63", "lat": 28.6230, "lng": 77.3720, "rating": 4.6, "skills": ["night_driving"], "plate": "UP16AT1021" },
+  { "name": "Suresh Yadav", "phone": "9000000002", "label": "Indirapuram, Ghaziabad", "lat": 28.6430, "lng": 77.3690, "rating": 4.2, "skills": ["fragile"], "plate": "UP14BT2245" },
+  { "name": "Imran Khan", "phone": "9000000003", "label": "Pari Chowk, Greater Noida", "lat": 28.4650, "lng": 77.5130, "rating": 4.4, "skills": ["heavy", "loading_help"], "plate": "DL01CX7788" },
+  { "name": "Gurpreet Singh", "phone": "9000000004", "label": "Sector 29, Gurgaon", "lat": 28.4690, "lng": 77.0680, "rating": 4.8, "skills": ["fragile", "night_driving"], "plate": "HR26DK3321" },
+  { "name": "Anil Sharma", "phone": "9000000005", "label": "Faridabad NIT", "lat": 28.3801, "lng": 77.3125, "rating": 4.5, "skills": ["perishable"], "plate": "UP16FR9012" },
+  { "name": "Mohan Lal", "phone": "9000000006", "label": "Jahangirpuri, Delhi", "lat": 28.7260, "lng": 77.1630, "rating": 4.1, "skills": ["heavy", "loading_help"], "plate": "DL01LA5566" },
+  { "name": "Vikram Chauhan", "phone": "9000000007", "label": "Noida Sector 16", "lat": 28.5760, "lng": 77.3170, "rating": 4.7, "skills": ["heavy", "fragile", "loading_help"], "plate": "UP14CG4410" },
+  { "name": "Deepak Verma", "phone": "9000000008", "label": "Karol Bagh, Delhi", "lat": 28.6510, "lng": 77.1900, "rating": 3.9, "skills": [], "plate": "HR55AB1209" }
+]

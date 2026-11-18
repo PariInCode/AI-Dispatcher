@@ -1,0 +1,32 @@
+{
+  "kal subah 2 ton cement noida se gurgaon bhejna hai": {
+    "pickup_place": "Noida", "drop_place": "Gurgaon", "material": "cement",
+    "weight_kg": 2000, "quantity": null, "size_category": "medium",
+    "handling": ["needs_cover", "needs_loader"], "deadline_iso": null,
+    "priority": "normal", "missing_fields": [], "confidence": "high"
+  },
+  "urgent: 500 kg vegetables faridabad to delhi azadpur mandi by 6am": {
+    "pickup_place": "Faridabad", "drop_place": "Azadpur", "material": "vegetables",
+    "weight_kg": 500, "quantity": null, "size_category": "small",
+    "handling": ["perishable", "needs_cover"], "deadline_iso": null,
+    "priority": "urgent", "missing_fields": [], "confidence": "high"
+  },
+  "need to move 3 sofas and a glass table from ghaziabad to connaught place today": {
+    "pickup_place": "Ghaziabad", "drop_place": "Connaught Place", "material": "furniture",
+    "weight_kg": null, "quantity": "3 sofas, 1 glass table", "size_category": "medium",
+    "handling": ["fragile", "needs_cover", "needs_loader"], "deadline_iso": null,
+    "priority": "normal", "missing_fields": ["weight"], "confidence": "medium"
+  },
+  "send 500 kg vegetables from faridabad to delhi azadpur mandi tomorrow morning": {
+    "pickup_place": "Faridabad", "drop_place": "Azadpur", "material": "vegetables",
+    "weight_kg": 500, "quantity": null, "size_category": "small",
+    "handling": ["perishable", "needs_cover"], "deadline_iso": null,
+    "priority": "normal", "missing_fields": [], "confidence": "high"
+  },
+  "urgent: 400 kg fruits faridabad to connaught place, must reach in 2 hours": {
+    "pickup_place": "Faridabad", "drop_place": "Connaught Place", "material": "fruits",
+    "weight_kg": 400, "quantity": null, "size_category": "small",
+    "handling": ["perishable", "needs_cover"], "deadline_iso": null,
+    "priority": "urgent", "missing_fields": [], "confidence": "high"
+  }
+}

@@ -1,0 +1,6 @@
+Unzip this over client/src (the folder named "src" goes into your client folder).
+Files inside overwrite the matching files in client/src. Nothing else changes.
+
+Not included on purpose (keep yours): src/api/*, src/main.jsx, src/App.jsx, vite.config.js.
+
+Optional logo: put your image at client/public/logo.png. Without it, a truck icon shows.
