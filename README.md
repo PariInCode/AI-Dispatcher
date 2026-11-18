@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="client/public/logo.png" alt="TruckSaathi logo" width="96" />
+  <img src="client/public/Logo.png" alt="RaastaSaathi logo" width="96" />
 </p>
 
 <h1 align="center">RaastaSaathi</h1>
